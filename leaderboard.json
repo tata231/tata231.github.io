@@ -71,51 +71,51 @@
                 "name": "guess_the_recipe"
             }
         ],
-        "submission_tag": "bela"
+        "submission_tag": "recipeqa-challenge"
     },
     "leaderboard": [
         {
             "bundle": {
-                "args": "run evaluate.py:0xd8d30a3cd83e46e38d531aa5f1a98a9c data.json:0xaec591480f514da58241c80b342fa727 predictions.json:0xdb6bc109cb734839b48644ef987f3144 \"python evaluate.py predictions.json data.json out.json\" --request-cpus 1 --request-time 1d --request-memory 2g --request-docker-image codalab/ubuntu:1.9 --request-disk 4g",
+                "args": "run evaluate.py:0xd8d30a3cd83e46e38d531aa5f1a98a9c data.json:0xaec591480f514da58241c80b342fa727 predictions.json:0x61c799713639482dbadedff189ece77d \"python evaluate.py predictions.json data.json out.json\" --request-cpus 1 --request-time 1d --request-memory 2g --request-docker-image codalab/ubuntu:1.9 --request-disk 4g",
                 "bundle_type": "run",
                 "command": "python evaluate.py predictions.json data.json out.json",
                 "data_hash": "0xdb8fd3623ef73f20c3711a4a2325d175f4127f0c",
                 "dependencies": [
                     {
                         "child_path": "evaluate.py",
-                        "child_uuid": "0x00189383ee1e4481b844b6d5b9124525",
+                        "child_uuid": "0xea6590cec62e42a8ae4c5bed76b21bbf",
                         "parent_name": "evaluate.py",
                         "parent_path": "",
                         "parent_uuid": "0xd8d30a3cd83e46e38d531aa5f1a98a9c"
                     },
                     {
                         "child_path": "data.json",
-                        "child_uuid": "0x00189383ee1e4481b844b6d5b9124525",
+                        "child_uuid": "0xea6590cec62e42a8ae4c5bed76b21bbf",
                         "parent_name": "recipeqa45k_test_hash.json",
                         "parent_path": "",
                         "parent_uuid": "0xaec591480f514da58241c80b342fa727"
                     },
                     {
                         "child_path": "predictions.json",
-                        "child_uuid": "0x00189383ee1e4481b844b6d5b9124525",
+                        "child_uuid": "0xea6590cec62e42a8ae4c5bed76b21bbf",
                         "parent_name": "tahasevim-pred-predict",
                         "parent_path": "",
-                        "parent_uuid": "0xdb6bc109cb734839b48644ef987f3144"
+                        "parent_uuid": "0x61c799713639482dbadedff189ece77d"
                     }
                 ],
-                "id": "0x00189383ee1e4481b844b6d5b9124525",
+                "id": "0xea6590cec62e42a8ae4c5bed76b21bbf",
                 "is_anonymous": false,
                 "metadata": {
                     "actions": [],
                     "allow_failed_dependencies": false,
-                    "created": 1534431338,
+                    "created": 1535463301,
                     "data_size": 4274,
-                    "description": "{\"submit_id\": \"0x42f069410bd249cbb1eaa08f3c751b67\", \"predict_id\": \"0xdb6bc109cb734839b48644ef987f3144\", \"submitter_id\": \"0x47826d7982a4467da125bd36758f320c\"}",
+                    "description": "{\"submit_id\": \"0x42f069410bd249cbb1eaa08f3c751b67\", \"predict_id\": \"0x61c799713639482dbadedff189ece77d\", \"submitter_id\": \"0x47826d7982a4467da125bd36758f320c\"}",
                     "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
                     "exitcode": 0,
-                    "last_updated": 1534435562,
+                    "last_updated": 1535463411,
                     "name": "tahasevim-pred-results",
-                    "remote": "vm-clws-prod-worker-1",
+                    "remote": "vm-clws-prod-worker-2",
                     "request_cpus": 1,
                     "request_disk": "4g",
                     "request_docker_image": "codalab/ubuntu:1.9",
@@ -126,11 +126,11 @@
                     "request_queue": "",
                     "request_time": "1d",
                     "run_status": "Upload started",
-                    "started": 1534435532,
+                    "started": 1535463395,
                     "tags": [
                         "competition-evaluate"
                     ],
-                    "time": 15.9086949825
+                    "time": 11.7037000656
                 },
                 "owner": {
                     "id": "0x47826d7982a4467da125bd36758f320c",
@@ -139,7 +139,7 @@
                 "permission": 2,
                 "permission_spec": "all",
                 "state": "ready",
-                "uuid": "0x00189383ee1e4481b844b6d5b9124525"
+                "uuid": "0xea6590cec62e42a8ae4c5bed76b21bbf"
             },
             "scores": {
                 "guess_the_recipe": 0,
@@ -158,5 +158,5 @@
             }
         }
     ],
-    "updated": 1534436185.817254
+    "updated": 1535463439.643551
 }
