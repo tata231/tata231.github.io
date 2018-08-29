@@ -220,10 +220,10 @@
                 "uuid": "0xbba6cb9553154236ab31f940b8c1f27d"
             },
             "scores": {
-                "textual_cloze": 0.30895119418483904,
-                "visual_cloze": 0.30358490566037735,
-                "visual_coherence": 0.9080493537015276,
-                "visual_ordering": 0.30524861878453037
+                "textual_cloze": 0.26895119418483904,
+                "visual_cloze": 0.27358490566037735,
+                "visual_coherence": 0.6580493537015276,
+                "visual_ordering": 0.25524861878453037
             },
             "submission": {
                 "created": 1535543616,
@@ -235,5 +235,5 @@
             }
         }
     ],
-    "updated": 1535546405.619096
+    "updated": 1535547579.601367
 }
