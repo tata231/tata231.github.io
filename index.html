@@ -182,7 +182,7 @@ body {
       var submissionInfo = item['submission']['description'];
       item.created = moment.unix(created).format('YYYY-MM-DD, h:mm:ss A');
       item.config = data.config;
-	  item.score = parseFloat(yourString).toFixed(2)
+	  item.score = parseFloat(item.score).toFixed(4)
     }
     var rendered = Mustache.render(template, data);
     $('#container').html(rendered);
