@@ -143,7 +143,7 @@
             },
             "scores": {
                 "guess_the_recipe": 0,
-                "textual_cloze": 0.26895119418483904,
+                "textual_cloze": 0.30895119418483904,
                 "visual_cloze": 0.27358490566037735,
                 "visual_coherence": 0.6580493537015276,
                 "visual_ordering": 0.40552486187845305
