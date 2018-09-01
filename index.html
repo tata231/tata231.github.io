@@ -7,7 +7,19 @@
 <link rel="stylesheet" href="static/styles/index.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hk-grotesk" type="text/css"/>
  <link rel="icon" href="static/images/favicon.png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
- 
+
+<style>
+th{
+	text-align:"center"
+}
+p.st{
+	 text-align:center; 
+  vertical-align: middle;
+  display: table-cell; 
+	padding-left:30px;
+}
+</style>
+
 </head>
 <body>
 
@@ -84,7 +96,8 @@ body {
     </thead>
     <tbody>
     {{#leaderboard}}
-        <th>{{{rank}}}</th>
+        <th>
+		<p class="st">{{rank}}</p><span class="date label label-default">Aug 15, 2018 </span></th>
         <td>{{submission.user_name}}</td>
         <td>{{created}}</td>
         <td>{{scores.textual_cloze}}</td>
@@ -172,6 +185,7 @@ body {
 (function($) {
   var LEADERBOARD_JSON = 'https://tata231.github.io/leaderboard.json';
   var template = $('#template').html();
+  //console.log(Math.round(Number("0.2636789")*10000)/10000);
   Mustache.parse(template);
   $.getJSON(LEADERBOARD_JSON).done(function (data) {
     for (var i = 0; i < data.leaderboard.length; i++) {
@@ -180,9 +194,9 @@ body {
       item.rank = i + 1;
       var created = item['submission']['created']
       var submissionInfo = item['submission']['description'];
-      item.created = moment.unix(created).format('YYYY-MM-DD, h:mm:ss A');
+      item.created = moment.unix(created).format('MM DD YYYY, ');
       item.config = data.config;
-	  item.score = parseFloat(item.score).toFixed(4)
+	  item.score = Math.round(Number(item.score)*10000)/10000;
     }
     var rendered = Mustache.render(template, data);
     $('#container').html(rendered);
