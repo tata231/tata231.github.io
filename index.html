@@ -195,14 +195,10 @@ body {
       var created = item['submission']['created']
       var submissionInfo = item['submission']['description'];
 	  var submission = item["submission"]
-	  var tst = submission.description.split(")")
+	  var tst = submission.description.split("|")
 	  var model = tst[0]
 	  var inst = tst[1]
-			if (inst.includes("http")){
-					var x = tst[1].split("http")
-					inst = x[0]
-					var l = "http"+x[1]
-			}
+	  var l = tst[2]
       item.created = moment.unix(created).format('MM DD YYYY, ');
       item.config = data.config;
 	  item.score = Math.round(Number(item.score)*10000)/10000;
